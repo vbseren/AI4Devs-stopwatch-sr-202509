@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timer and Countdown</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Timer & Countdown Manager</h1>
+
+<div class="tabs">
+<button class="tab-btn active" data-tab="stopwatch">⏱️ Cronómetro</button>
+<button class="tab-btn" data-tab="countdown">⏲️ Cuenta Regresiva</button>
+</div>
+
+<!-- Sección Cronómetro -->
+<div class="tab-content active" id="stopwatch-tab">
+<div class="control-panel">
+<button class="btn btn-add" id="addStopwatch">+ Nuevo Cronómetro</button>
+</div>
+<div class="timers-grid" id="stopwatchesContainer"></div>
+</div>
+
+<!-- Sección Cuenta Regresiva -->
+<div class="tab-content" id="countdown-tab">
+<div class="control-panel">
+<div class="countdown-setup">
+<div class="input-group">
+<label for="countdownHours">Horas:</label>
+<input type="number" id="countdownHours" min="0" max="23" value="0">
+</div>
+<div class="input-group">
+<label for="countdownMinutes">Minutos:</label>
+<input type="number" id="countdownMinutes" min="0" max="59" value="0">
+</div>
+<div class="input-group">
+<label for="countdownSeconds">Segundos:</label>
+<input type="number" id="countdownSeconds" min="0" max="59" value="0">
+</div>
+<button class="btn btn-add" id="addCountdown">+ Crear Cuenta Regresiva</button>
+</div>
+</div>
+<div class="timers-grid" id="countdownsContainer"></div>
+</div>
+</div>
+
+<!-- Plantilla para notificaciones -->
+<div class="notifications" id="notifications"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
